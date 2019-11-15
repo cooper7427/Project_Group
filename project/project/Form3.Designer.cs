@@ -86,6 +86,7 @@
             this.btnCancelOrder.TabIndex = 4;
             this.btnCancelOrder.Text = "Отменить заказ";
             this.btnCancelOrder.UseVisualStyleBackColor = true;
+            this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
             // 
             // btnFillOrder
             // 
@@ -95,6 +96,7 @@
             this.btnFillOrder.TabIndex = 5;
             this.btnFillOrder.Text = "Заполнить заказ";
             this.btnFillOrder.UseVisualStyleBackColor = true;
+            this.btnFillOrder.Click += new System.EventHandler(this.btnFillOrder_Click);
             // 
             // btnFinishUpdates
             // 
@@ -104,6 +106,7 @@
             this.btnFinishUpdates.TabIndex = 6;
             this.btnFinishUpdates.Text = "Готово";
             this.btnFinishUpdates.UseVisualStyleBackColor = true;
+            this.btnFinishUpdates.Click += new System.EventHandler(this.btnFinishUpdates_Click);
             // 
             // dtpFillDate
             // 
@@ -136,6 +139,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FillOrCancel";
             this.Text = "Заполнение или отмена заказов";
+            this.Load += new System.EventHandler(this.FillOrCancel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
