@@ -193,6 +193,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "NewCustomer";
             this.Text = "Новая учетная запись и заказ";
+            this.Load += new System.EventHandler(this.NewCustomer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
