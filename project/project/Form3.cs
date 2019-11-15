@@ -22,7 +22,52 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (IsOrderIDValid())
+            {
+                using (SqlConnection connection = new SqlConnection(Properties.Settings.Default.connString))
+                {
+                    // Define a t-SQL query string that has a parameter for orderID.
+                    const string sql = "SELECT * FROM Sales.Orders WHERE orderID = @orderID";
 
+                    // Create a SqlCommand object.
+                    using (SqlCommand sqlCommand = new SqlCommand(sql, connection))
+                    {
+                        // Define the @orderID parameter and set its value.
+                        sqlCommand.Parameters.Add(new SqlParameter("@orderID", SqlDbType.Int));
+                        sqlCommand.Parameters["@orderID"].Value = parsedOrderID;
+
+                        try
+                        {
+                            connection.Open();
+
+                            // Run the query by calling ExecuteReader().
+                            using (SqlDataReader dataReader = sqlCommand.ExecuteReader())
+                            {
+                                // Create a data table to hold the retrieved data.
+                                DataTable dataTable = new DataTable();
+
+                                // Load the data from SqlDataReader into the data table.
+                                dataTable.Load(dataReader);
+
+                                // Display the data from the data table in the data grid view.
+                                this.dgvCustomerOrders.DataSource = dataTable;
+
+                                // Close the SqlDataReader.
+                                dataReader.Close();
+                            }
+                        }
+                        catch
+                        {
+                            MessageBox.Show("The requested order could not be loaded into the form.");
+                        }
+                        finally
+                        {
+                            // Close the connection.
+                            connection.Close();
+                        }
+                    }
+                }
+            }
         }
         private bool IsOrderIDValid()
         {
