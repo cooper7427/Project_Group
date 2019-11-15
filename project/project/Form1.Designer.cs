@@ -28,38 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnGoToAdd = new System.Windows.Forms.Button();
+            this.btnGoToFillOrCancel = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnGoToAdd
             // 
-            this.button1.Location = new System.Drawing.Point(36, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Добавить учетную запись";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGoToAdd.Location = new System.Drawing.Point(36, 74);
+            this.btnGoToAdd.Name = "btnGoToAdd";
+            this.btnGoToAdd.Size = new System.Drawing.Size(183, 23);
+            this.btnGoToAdd.TabIndex = 0;
+            this.btnGoToAdd.Text = "Добавить учетную запись";
+            this.btnGoToAdd.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnGoToFillOrCancel
             // 
-            this.button2.Location = new System.Drawing.Point(36, 120);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Заполнить или отменить заказ";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnGoToFillOrCancel.Location = new System.Drawing.Point(36, 120);
+            this.btnGoToFillOrCancel.Name = "btnGoToFillOrCancel";
+            this.btnGoToFillOrCancel.Size = new System.Drawing.Size(183, 23);
+            this.btnGoToFillOrCancel.TabIndex = 1;
+            this.btnGoToFillOrCancel.Text = "Заполнить или отменить заказ";
+            this.btnGoToFillOrCancel.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnExit
             // 
-            this.button3.Location = new System.Drawing.Point(85, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Выход";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(85, 204);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Выход";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -76,9 +76,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 245);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnGoToFillOrCancel);
+            this.Controls.Add(this.btnGoToAdd);
             this.Name = "Навигация";
             this.Text = "Приветствие";
             this.ResumeLayout(false);
@@ -88,9 +88,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnGoToAdd;
+        private System.Windows.Forms.Button btnGoToFillOrCancel;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
     }
 }
